@@ -19,6 +19,7 @@ function Contact() {
 
       if (docSnap.exists()) {
         setLandlord(docSnap.data());
+        console.log(docSnap.data());
       } else {
         toast.error("Could not get landlord data");
       }
@@ -36,7 +37,7 @@ function Contact() {
       </header>
 
       {landlord !== null && (
-        <main>
+        <main className="mb">
           <div className="contactLandlord">
             <p className="landlordName">Contact {landlord?.name}</p>
           </div>
